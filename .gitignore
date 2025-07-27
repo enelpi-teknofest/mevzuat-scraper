@@ -1,2 +1,4 @@
 .scraper
+.vscode
 __pycache__/
+*.json

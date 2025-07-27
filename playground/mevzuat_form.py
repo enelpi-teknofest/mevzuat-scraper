@@ -30,7 +30,6 @@ payload = {
         "MevzuatNo": "",
         "BaslangicTarihi": "",
         "BitisTarihi": "",
-        # *** hard-coded anti-forgery token (works only for a short time!) ***
         "antiforgerytoken":
             "sa"
     }
@@ -46,8 +45,8 @@ headers = {
     "Sec-Fetch-Mode": "cors",
     "Sec-Fetch-Site": "same-origin",
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                   "AppleWebKit/537.36 (KHTML, like Gecko) "
-                   "Chrome/137.0.0.0 Safari/537.36"),
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/137.0.0.0 Safari/537.36"),
     "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"macOS\"",

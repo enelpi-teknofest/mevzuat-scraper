@@ -7,13 +7,8 @@ def main():
     start = 0          # Starting index for pagination
     length = 100       # Number of records to fetch
 
-    response = mevzuat.request(mev_tur=mev_tur, start=start, length=length)
-    
-    if response:
-        print("Response received successfully.")
-        print(response)  # or process the response as needed
-    else:
-        print("Failed to retrieve data.")
+    metadata = mevzuat.request(mev_tur=mev_tur, start=start, length=length)
+    metadata = mevzuat.request_text(metadata)
 
 if __name__ == "__main__":
     main()
