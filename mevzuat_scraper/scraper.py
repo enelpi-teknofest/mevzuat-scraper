@@ -113,7 +113,7 @@ class Mevzuat:
                         **m
                     )
                 )
-                logger.info(f"- ✅ Retrieved Text @ {i+1}, Text[:5] = {text[:5].strip()} ... ")
+                logger.info(f" - ✅ Retrieved Text @ {i+1}, Text[:5] = {text[:5].strip()} ... ")
             except Exception as e:
                 logger.error(f"An error occured while requesting text:\n {e}")
         return data
