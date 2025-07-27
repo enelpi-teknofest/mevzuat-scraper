@@ -1,27 +1,26 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 import time
 
-# Initialize the Chrome WebDriver (make sure chromedriver is in PATH)
-driver = webdriver.Chrome()
+# --- CONFIGURATION ---
+proxy = "oc-7a572446969ee5c24ffbe8a8ed851cf24600b41a9d898982dbb70c435ec59fbb-country-TR-session-d9242:v1leozow6ges@proxy.oculus-proxy.com:31111"  # Replace with your proxy IP:port
+
+# Set up Chrome options
+chrome_options = Options()
+# chrome_options.add_argument(f'--proxy-server=http://{proxy}')
+
+# Initialize WebDriver with proxy
+driver = webdriver.Chrome(options=chrome_options)
 
 try:
-    # Open Google
     driver.get("https://www.google.com")
-
-    # Find the search box, type in a query, and hit ENTER
     search_box = driver.find_element(By.NAME, "q")
     search_box.send_keys("Selenium Python")
     search_box.send_keys(Keys.RETURN)
-
-    # Wait for a few seconds to let results load
     time.sleep(3)
-
-    # Print the title of the page
     print("Page title is:", driver.title)
 
 finally:
-    # Close the browser
     driver.quit()
-

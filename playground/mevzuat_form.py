@@ -2,6 +2,12 @@ import requests
 
 url = "https://www.mevzuat.gov.tr/Anasayfa/MevzuatDatatable"
 
+mev_tur = ['Kanun', 'CumhurbaskaniKararnameleri', 
+           'CumhurbaskanligiVeBakanlarKuruluYonetmelik', 
+           'CumhurbaskaniKararlari', 'CumhurbaskanligiGenelgeleri',
+           'KHK', 'Tuzuk', 'KurumVeKurulusYonetmeligi',
+           'Teblig']
+
 payload = {
     "draw": 1,
     "columns": [
@@ -26,9 +32,7 @@ payload = {
         "BitisTarihi": "",
         # *** hard-coded anti-forgery token (works only for a short time!) ***
         "antiforgerytoken":
-            "CfDJ8GZT_MP_neZPpJvMcEuCmFB6vx9QAVisckzNS5amaDR-"
-            "Yx3N5ZkkCxHN5pgOZb9xbc9Tet0Qw86fiipwml-GhzCTXn261YmwfX78zdGABw"
-            "nzyQCZyx7DS3Fsy5SvQZ91J-5Ky0c4fzQ4DAhwM8eWWFk"
+            "sa"
     }
 }
 
